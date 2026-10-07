@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Identity Kit</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================
+       IDENTITY KIT
+       ========================= */
+
+    :root {
+      --primary: #6C63FF;
+      --accent: #00C2A8;
+      --text: #171717;
+      --background: #F8F9FC;
+      --white: #FFFFFF;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 8%;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    nav span {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 90px 8% 70px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #E9E7FF;
+      color: var(--primary);
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Poppins", sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* Main content */
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 8% 80px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      font-size: 30px;
+      margin-bottom: 24px;
+    }
+
+    /* Cards */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    /* Color palette */
+
+    .colors {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .color {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .color-box {
+      height: 130px;
+    }
+
+    .color-info {
+      padding: 15px;
+    }
+
+    .color-info strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .color-info small {
+      color: var(--muted);
+    }
+
+    /* Typography */
+
+    .font-example {
+      margin-top: 18px;
+      padding: 20px;
+      background: var(--background);
+      border-radius: 12px;
+    }
+
+    .poppins {
+      font-family: "Poppins", sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .inter {
+      font-family: "Inter", sans-serif;
+      font-size: 20px;
+    }
+
+    /* Logo */
+
+    .logo-demo {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .large-logo {
+      width: 100px;
+      height: 100px;
+      background: var(--primary);
+      color: white;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    /* Style note */
+
+    .style-note {
+      background: var(--text);
+      color: white;
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .style-note p {
+      color: #D1D5DB;
+      font-size: 17px;
+    }
+
+    /* Footer */
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: var(--text);
+      color: #9CA3AF;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 700px) {
+
+      .grid,
+      .colors {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      nav {
+        padding: 18px 6%;
+      }
+
+      main {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">YK</div>
+    <span>Identity Kit</span>
+  </nav>
+
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <div class="tag">WEEK 03 • BRAND IDENTITY</div>
+
+    <h1>
+      My Personal <span>Identity Kit</span>
+    </h1>
+
+    <p>
+      A simple visual identity system that defines my portfolio's
+      colors, typography, logo, and overall design style.
+    </p>
+
+  </section>
+
+
+  <main>
+
+    <!-- Brand Overview -->
+    <section class="section">
+
+      <h2>01. Brand Overview</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Brand Personality</h3>
+          <p>
+            Modern, creative, clean, professional, and approachable.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Design Direction</h3>
+          <p>
+            Minimal layouts, strong typography, generous spacing,
+            and a modern purple and teal color combination.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Color Palette -->
+    <section class="section">
+
+      <h2>02. Color Palette</h2>
+
+      <div class="colors">
+
+        <div class="color">
+
+          <div
+            class="color-box"
+            style="background:#6C63FF;">
+          </div>
+
+          <div class="color-info">
+            <strong>Primary</strong>
+            <small>#6C63FF</small>
+          </div>
+
+        </div>
+
+
+        <div class="color">
+
+          <div
+            class="color-box"
+            style="background:#00C2A8;">
+          </div>
+
+          <div class="color-info">
+            <strong>Accent</strong>
+            <small>#00C2A8</small>
+          </div>
+
+        </div>
+
+
+        <div class="color">
+
+          <div
+            class="color-box"
+            style="background:#171717;">
+          </div>
+
+          <div class="color-info">
+            <strong>Text</strong>
+            <small>#171717</small>
+          </div>
+
+        </div>
+
+
+        <div class="color">
+
+          <div
+            class="color-box"
+            style="background:#F8F9FC;">
+          </div>
+
+          <div class="color-info">
+            <strong>Background</strong>
+            <small>#F8F9FC</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Typography -->
+    <section class="section">
+
+      <h2>03. Typography</h2>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <h3>Heading Font</h3>
+
+          <div class="font-example">
+
+            <div class="poppins">
+              Poppins
+            </div>
+
+            <p>
+              Used for headings, titles, and important
+              visual elements.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>Body Font</h3>
+
+          <div class="font-example">
+
+            <div class="inter">
+              Inter
+            </div>
+
+            <p>
+              Used for paragraphs, descriptions,
+              buttons, and supporting content.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Logo -->
+    <section class="section">
+
+      <h2>04. Logo / Favicon</h2>
+
+      <div class="card">
+
+        <div class="logo-demo">
+
+          <div class="large-logo">
+            YK
+          </div>
+
+          <div>
+            <h3>Personal Logo</h3>
+
+            <p>
+              A simple monogram using my initials.
+              The rounded shape represents a modern,
+              friendly, and professional identity.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Style Note -->
+    <section class="section">
+
+      <h2>05. Style Note</h2>
+
+      <div class="style-note">
+
+        <p>
+          My visual identity is modern, clean, and professional.
+          Poppins is used for headings and Inter for body text,
+          supported by a purple and teal color palette on a
+          light background. The overall design focuses on
+          simplicity, clarity, and creativity.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Design Rules -->
+    <section class="section">
+
+      <h2>06. Design Rules</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>✓ Do</h3>
+          <p>
+            Use consistent fonts, colors, spacing,
+            rounded corners, and clean layouts.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>✕ Don't</h3>
+          <p>
+            Avoid too many colors, unnecessary fonts,
+            cluttered layouts, and excessive decoration.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>My Identity Kit • Week 03</p>
+  </footer>
+
+</body>
+</html>
