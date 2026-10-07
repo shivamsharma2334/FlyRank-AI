@@ -1,4 +1,4 @@
-# Flyran AI Intershop Backend
+# Flyrank AI -- Backend AI Engineer Intern
 
 Backend system developed as part of my **AI Engineer Internship at Flyran AI**.
 
